@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_main">
+
+    <fragment
+        android:id="@+id/markDownFragment"
+        android:name="com.gm.q.example.ui.markdown.MarkDownFragment"
+        android:label="fragment_mark_down"
+        tools:layout="@layout/fragment_mark_down" />
+
+    <navigation
+        android:id="@+id/nav_main"
+        app:startDestination="@id/nav_activity">
+        <fragment
+            android:id="@+id/nav_activity"
+            android:name="com.gm.q.example.ui.activity.activityFragment"
+            android:label="@string/menu_activity"
+            tools:layout="@layout/fragment_activity_list">
+            <argument
+                android:name="FileName"
+                android:defaultValue="@null" />
+            <action
+                android:id="@+id/action_nav_activity_to_markDownFragment3"
+                app:destination="@id/markDownFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/nav_home"
+            android:name="com.gm.q.example.ui.home.HomeFragment"
+            android:label="@string/menu_home"
+            tools:layout="@layout/fragment_home" />
+        <fragment
+            android:id="@+id/nav_gallery"
+            android:name="com.gm.q.example.ui.gallery.GalleryFragment"
+            android:label="@string/menu_gallery"
+            tools:layout="@layout/fragment_gallery" />
+        <fragment
+            android:id="@+id/nav_slideshow"
+            android:name="com.gm.q.example.ui.slideshow.SlideshowFragment"
+            android:label="@string/menu_slideshow"
+            tools:layout="@layout/fragment_slideshow" />
+        <fragment
+            android:id="@+id/nav_treatment"
+            android:name="com.gm.q.example.ui.materialshapeview.TreatmentFragment"
+            android:label="@string/menu_treatment"
+            tools:layout="@layout/fragment_treatment" />
+        <fragment
+            android:id="@+id/nav_component"
+            android:name="com.gm.q.example.ui.component.ComponentFragment"
+            android:label="fragment_component_list"
+            tools:layout="@layout/fragment_component_list" />
+    </navigation>
+</navigation>

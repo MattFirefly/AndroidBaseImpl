@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <!--    checkableBehavior:用于指定菜单组内各项菜单项的选择行为，none(不可选)、all（多选 ）、single（单选）；-->
+    <!--    menuCategory:用于对菜单分类，指定菜单的优先级，可选值为：container、system、secondary和alternative；-->
+    <item android:title="图片背景">
+        <menu>
+            <group
+                android:id="@+id/nav_about_group1"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_treatment"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="@string/menu_treatment" />
+                <item
+                    android:id="@+id/nav_activity"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="@string/menu_activity" />
+            </group>
+        </menu>
+    </item>
+    <group
+        android:id="@+id/nav_about_group2"
+        android:checkableBehavior="single"
+        android:title="控件">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+
+    </group>
+
+    <group android:id="@+id/nav_about_group">
+        <item android:title="about">
+            <item
+                android:id="@+id/nav_component"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="component" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="about" />
+        </item>
+    </group>
+</menu>
